@@ -13,6 +13,7 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/headers.css') }}">
+    <link href="{{ url_for('static', filename='css/product.css') }}" rel="stylesheet">
     <title>{% block title %}{% endblock title %}</title>
 </head>
 
@@ -89,7 +90,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/profile" class="nav-link text-white">
+                        <a href="#" class="nav-link text-white">
                             <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                                 <use xlink:href="#people-circle" />
                             </svg>
@@ -108,8 +109,12 @@
             </form>
 
             <div class="text-end">
-                <button type="button" class="btn btn-light text-dark me-2">Login</button>
-                <button type="button" class="btn btn-primary">Sign-up</button>
+                <a href="/login">
+                    <button type="button" class="btn btn-light text-dark me-2">Login</button>
+                </a>
+                <a href="/signup">
+                    <button type="button" class="btn btn-primary">Sign-up</button>
+                </a>
             </div>
         </div>
     </div>
@@ -121,13 +126,30 @@
     <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}">
     </script>
 </body>
-<footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2017–2021 CodeMonkey</p>
-    <ul class="list-inline">
-        <li class="list-inline-item"><a class="nav nav-link" href="#">Privacy</a></li>
-        <li class="list-inline-item"><a class="nav nav-link" href="#">Terms</a></li>
-        <li class="list-inline-item"><a class="nav nav-link" href="#">Support</a></li>
-    </ul>
+
+<footer class="container py-4">
+    <div class="row align-items-center">
+        <div class="col-12 col-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
+                viewBox="0 0 24 24">
+                <title>Product</title>
+                <circle cx="12" cy="12" r="10" />
+                <path
+                    d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+
+            </svg>CodeMonkey
+            <small class="mb-3 text-muted">&copy; 2017–2021</small>
+        </div>
+        <div class="col-6 col-md">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a class="nav nav-link" href="#">Privacy</a></li>
+                <li class="list-inline-item"><a class="nav nav-link" href="#">Terms</a></li>
+                <li class="list-inline-item"><a class="nav nav-link" href="#">Support</a></li>
+            </ul>
+        </div>
+
+    </div>
 </footer>
 
 </html>

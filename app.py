@@ -15,12 +15,6 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/profile")
-def profile():
-    # return "Hello, World!"
-    return render_template("profile.html")
-
-
 @app.route("/orders")
 def orders():
     # return "Hello, World!"
